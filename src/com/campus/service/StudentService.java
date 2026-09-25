@@ -9,22 +9,24 @@ public class StudentService {
             return 0;
         }
         int total = 0;
-        for (int mark : marks){
+        for (int mark : student.getmarks()){
           total += mark;
         }
         return total;
     }
     //calculate average marks
 
-    public double calculateAverageMarks(int[] marks) {
+    public double calculateAverageMarks(Student student) {
+        int[] marks = student.getmarks();
         if (marks == null || marks.length == 0) {
             return 0.0;
         }
-        int total = calculateTotal(MARKS);
+        int total = calculateTotal(student);
         return (double) total / marks.length;
     }
     //find maximum marks
-    public int findMaximumMarks(int[] marks) {
+    public int findMaximumMarks(Student student) {
+        int[] marks = student.getmarks();
         if (marks == null || marks.length == 0) {
             return 0;
         }
@@ -37,7 +39,8 @@ public class StudentService {
         return max;
     }
     //find minimum marks
-    public int findMinimumMarks(int[] marks) {
+    public int findMinimumMarks(Student student) {
+        int[] marks = student.getmarks();
         if (marks == null || marks.length == 0) {
             return 0;
         }
@@ -50,55 +53,53 @@ public class StudentService {
         return min;
     }
     //grade based on marks
-    public char grade(student student) {
+    public char grade(Student student) {
         int [] marks = student.getmarks();
         if (marks == null || marks.length == 0) {
             return 'F';
         }
-        int total = calculateTotal(marks);
-        int average =(int) calculateAverageMarks(marks);
+        int average = (int) calculateAverageMarks(student);
         if (average >= 90) {
-            return "A";
+            return 'A';
         } else if (average >= 80) {
-            return "B";
+            return 'B';
         } else if (average >= 70) {
-            return "C";
+            return 'C';
         } else if (average >= 60) {
-            return "D";
+            return 'D';
         } else {
-            return "F";
+            return 'F';
         }
     } 
     //pass or fail
-    public boolean isPass(student student) {
+    public boolean isPass(Student student) {
         int[] marks = student.getmarks();
         if (marks == null || marks.length == 0) {
-            return "fail";
+            return false;
         }
-        int average = (int) calculateAverage(student);
+        int average = (int) calculateAverageMarks(student);
         if (average >= 40) {
-            return "pass";
+            return true;
         } else {
-            return "fail";
+            return false;
         }
-
+    }
         //display report card
-    public void displayReportCard(student student) {
+    public void displayReportCard(Student student) {
         System.out.println("Student ID: " + student.getstudentid());
         System.out.println("Student Name: " + student.getstudentname());
         System.out.println("Department: " + student.getdepartment());
             System.out.println("Total Marks: " + calculateTotal(student));
-            System.out.println("Average Marks: " + calculateAverageMarks(marks));
-            System.out.println("Maximum Marks: " + findMaximumMarks(marks));
-            System.out.println("Minimum Marks: " + findMinimumMarks(marks));
+            System.out.println("Average Marks: " + calculateAverageMarks(student));
+            System.out.println("Maximum Marks: " + findMaximumMarks(student));
+            System.out.println("Minimum Marks: " + findMinimumMarks(student));
             System.out.println("Grade: " + grade(student));
-            System.out.println("Result: "  +passorfail(student));
+            System.out.println("Result: "  +isPass(student));
 
     }
 
 
     }
-
 
 
 

@@ -10,34 +10,34 @@ public class Student{
     private int[] marks;
 
 //static variables
-static int studentscount=0;
+static int studentscount = 0;
 
 //default constructor
-pub;ic student(){
-    studentcount++;
+public Student(){
+    studentscount++;
 }
 
 //parameterized constructor
-public tudent(int studentid,string studentname,int age,string department,int[] marks){
+public Student(int studentid,String studentname,int age,String department,int[] marks){
     this.studentid = studentid;
     this.studentname = studentname;
     this.age = age;
     this.department = department;
     this.marks = marks;
-    studentcount++;
+    studentscount++;
 }
 
 //getters
 public int getstudentid(){
     return studentid;
 }
-public string getstudentname(){
+public String getstudentname(){
     return studentname;
 }
 public int getAge(){
     return age;
 }
-public string getdepartment(){
+public String getdepartment(){
     return department;
 }
 public int[] getmarks(){
@@ -68,19 +68,16 @@ public void displayStudentinfo(){
     System.out.println("Department: " + department);
 }
 
-public void displayStudentinfo(booleam showmarks){
+public void displayStudentinfo(boolean showmarks){
     displayStudentinfo();
 
     if(showmarks){
-        system.out.println("marks: " + java.util.Arrays.toString(marks));
-        (marks));
+        System.out.println("marks: " + java.util.Arrays.toString(marks));
     }    
 }
 //static method
 public static void displayStudentcount(){
-    system.out.println("Total number of students: " + studentcount);
-}
-    return studentcount;
-}
+    System.out.println("Total number of students: " + studentscount);
 }
 
+}
