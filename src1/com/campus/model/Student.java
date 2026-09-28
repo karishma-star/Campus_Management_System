@@ -1,6 +1,6 @@
 package com.campus.model;
-
-public class Student{
+import com.campus.Contract.StudentOperations;
+public abstract class Student implements StudentOperations {
     //Encapsulation - data hiding
     //instance variales
     private int studentid;
@@ -75,6 +75,8 @@ public void displayStudentinfo(boolean showmarks){
         System.out.println("marks: " + java.util.Arrays.toString(marks));
     }    
 }
+
+abstract void studentType();
 //static method
 public static void displayStudentcount(){
     System.out.println("Total number of students: " + studentscount);
