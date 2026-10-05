@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 C:\karish.repo\Campus_Management_System\src\main\java\com\campus\controller\StudentServlet.java
 C:\karish.repo\Campus_Management_System\src\main\java\com\campus\dao\StudentDAO.java
 C:\karish.repo\Campus_Management_System\src\main\java\com\campus\util\DBConnection.java
 C:\karish.repo\Campus_Management_System\src\main\java\com\campus\services\StudentService.java
 C:\karish.repo\Campus_Management_System\src\main\java\com\campus\model\Student.java
+=======
+/workspaces/Campus_Management_System/src/main/java/com/campus/services/StudentService.java
+/workspaces/Campus_Management_System/src/main/java/com/campus/controller/StudentServlet.java
+>>>>>>> f87f0fed6e57bd30a1a4ac953798b61a6389c301

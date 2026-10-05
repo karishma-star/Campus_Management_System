@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 com\campus\model\Student.class
 com\campus\dao\StudentDAO.class
 com\campus\util\DBConnection.class
 com\campus\controller\StudentServlet.class
 com\campus\services\StudentService.class
+=======
+com/campus/controller/StudentServlet.class
+com/campus/services/StudentService.class
+>>>>>>> f87f0fed6e57bd30a1a4ac953798b61a6389c301
